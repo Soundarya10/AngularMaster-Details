@@ -1,0 +1,60 @@
+
+.highlight {
+  background-color: #00274c;
+  color: #ffcb05;
+}
+
+.content {
+    width: 90%;
+    background-color: #ededed;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#contentView {
+    width: 90%;
+    background-color: white;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar { 
+    display: none;  // Safari and Chrome
+}
+
+.listEmployees, .employeelist {
+    padding: 10px;
+}
+
+.mainContainer {
+    height: 100%;
+    width: 100%;
+    background-color: #ededed;
+}
+
+.details {
+    width: 60%;
+    height: auto;
+    padding: 20px;
+
+}
+
+.tableContent {
+    padding: 0px 20px;
+    height: 100vh;
+
+}
+
+.editIcon , .deleteIcon {
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.deleteIcon {
+    color:red;
+
+}
+
+.editIcon {
+    color: orange;
+}

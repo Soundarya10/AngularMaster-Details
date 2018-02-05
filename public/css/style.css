@@ -1,7 +1,7 @@
 
 .highlight {
-  background-color: #00274c;
-  color: #ffcb05;
+  background-color: #ededed;
+  color: black;
 }
 
 .content {
@@ -11,6 +11,9 @@
     height: 100%;
 }
 
+.empTable {
+    margin-top: 15px;
+}
 #contentView {
     width: 90%;
     background-color: white;
@@ -20,6 +23,22 @@
 
 ::-webkit-scrollbar { 
     display: none;  // Safari and Chrome
+}
+
+.columnHeaders {
+    width: 28%;
+}
+.actionColumn {
+    width: 15%;
+}
+
+.employeePageHeader {
+    margin-top: 10px;
+    color: white;
+}
+
+.navbar{
+    margin-bottom: 0px;
 }
 
 .listEmployees, .employeelist {
@@ -47,12 +66,11 @@
 
 .editIcon , .deleteIcon {
     text-decoration: none;
-    margin-left: 20px;
 }
 
 .deleteIcon {
     color:red;
-
+    margin-left: 20px;
 }
 
 .editIcon {

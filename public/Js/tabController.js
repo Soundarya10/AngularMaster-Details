@@ -6,21 +6,22 @@
 
     function tabCtrl($scope, $http) {
         //Displaying Data in Table
-        let a = function() { 
+        let FunctionA = function() { 
             $http({
                 method: "GET",
                 url: "http://localhost:3002/data",
             })
             .then(function mySuccess(response) {
                 $scope.myTableData = response.data; 
-                $scope.colHeaders = Object.keys($scope.myTableData[0])
+                $scope.colHeaders = Object.keys($scope.myTableData[0]);
+                $scope.colHeaders.splice(0,1);
             }, function myError(response) {
                 $scope.names = response.statusText;
                 console.log(response.statusText);
             });
         }
 
-        a();
+        FunctionA();
 
         $('#myModal').on('shown.bs.modal', function() {
             $('#myInput').focus()
@@ -79,7 +80,7 @@
             })
             .then(function mySuccess(response) {
                 $('#myModal').modal('hide');
-                a();
+                FunctionA();
             }, function myError(response) {
                 $scope.names = response.statusText;
                 console.log(response.statusText);
@@ -94,7 +95,7 @@
                 url: "http://localhost:3002/"+id,
             })
             .then(function mySuccess(response) {
-                a();
+                FunctionA();
                 // $scope.myTableData = response.data;
             }, function myError(response) {
                 $scope.names = response.statusText;
@@ -117,7 +118,7 @@
             })
             .then(function mySuccess(response) {
                 $('#myModalEdit').modal('hide');
-                a();
+                FunctionA();
             }, function myError(response) {
                 $scope.names = response.statusText;
                 console.log(response.statusText);
